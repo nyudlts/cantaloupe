@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+  <!DOCTYPE html>
+<head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="High-performance IIIF image server in Java
+  <meta name="description" content="High-performance dynamic image server in Java
 ">
 
   <title>
@@ -17,126 +17,107 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="/cantaloupe/css/syntax.css">
-  <link rel="stylesheet" href="/cantaloupe/css/base.css">
+  <link rel="stylesheet" href="/cantaloupe/css/manual.css">
 
   <script src="/cantaloupe/scripts/jquery.min.js"></script>
-
-  <script>
-  // Redirect http:// to https:// (except on localhost)
-  var host = 'https://medusa-project.github.io'.replace('http://', '').
-      replace('https://', '').split(/[/?#]/)[0];
-  if (window.location.host == host && window.location.protocol != 'https:') {
-    window.location.protocol = 'https:';
-  }
-  </script>
 
 </head>
 
 
   <body>
 
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <a class="navbar-brand" href="/cantaloupe/">
+    <img alt="Cantaloupe" src="/cantaloupe/images/cantaloupe.png" width="40">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/cantaloupe/">
-        <img alt="Cantaloupe" src="/cantaloupe/images/cantaloupe.png" width="40">
-      </a>
-    </div>
+  <div class="collapse navbar-collapse" id="navbar-items">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle  active " href="#" id="user-manual-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          User Manual
+        </a>
+        <div class="dropdown-menu" aria-labelledby="user-manual-dropdown">
+          <a class="dropdown-item" href="/cantaloupe/manual/4.0/getting-started.html">4.0</a>
+          <a class="dropdown-item" href="/cantaloupe/manual/3.4/getting-started.html">3.4</a>
+          <a class="dropdown-item" href="/cantaloupe/manual/3.3/getting-started.html">3.3</a>
+          <a class="dropdown-item" href="/cantaloupe/manual/3.2/getting-started.html">3.2</a>
+          <a class="dropdown-item" href="/cantaloupe/manual/3.1/getting-started.html">3.1</a>
+          <a class="dropdown-item" href="/cantaloupe/manual/3.0/getting-started.html">3.0</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/cantaloupe/upgrade.html">Upgrading</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/cantaloupe/changes.html">Change Log</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/medusa-project/cantaloupe/">GitHub</a>
+      </li>
+    </ul>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Started <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/cantaloupe/get-started.html">For the First Time</a></li>
-            <li><a href="/cantaloupe/upgrade.html">Upgrade</a></li>
-            <li class="divider"></li>
-            <li><a href="/cantaloupe/changes.html">Change Log</a></li>
-          </ul>
-        </li>
-        <li><a href="/cantaloupe/manual/">User Manual</a></li>
-        <li><a href="https://github.com/medusa-project/cantaloupe/">GitHub</a></li>
-        <li><a href="/cantaloupe/help.html">Help &amp; Feedback</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://github.com/medusa-project/cantaloupe/releases.atom" title="Subscribe to Releases"><img width="22" height="22" src="/cantaloupe/images/feed.svg"></a></li>
-      </ul>
-    </div>
-
+    <ul class="navbar-nav ml-md-auto">
+      <li class="nav-item">
+        <a href="https://github.com/medusa-project/cantaloupe/releases.atom" title="Subscribe to Releases">
+          <img width="22" height="22" src="/cantaloupe/images/feed.svg">
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>
 
 
     <div class="container-fluid">
-      <ul class="nav nav-pills">
-  <li role="presentation"  class="active" ><a href="/cantaloupe/manual/3.4/">3.4</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/3.3/">3.3</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/3.2/">3.2</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/3.1/">3.1</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/3.0/">3.0</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/2.2/">2.2</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/2.1/">2.1</a></li>
-</ul>
+      <div class="row">
+  <div class="col-sm-4 col-md-3 col-lg-2 d-print-none">
+    <div class="card">
+  <h5 class="card-header version">3.3</h5>
+  <div class="list-group list-group-flush">
+    <a class="list-group-item list-group-item-action " href="getting-started.html">Getting Started</a>
 
+    <a class="list-group-item list-group-item-action " href="configuration.html">Configuration</a>
 
-<h1>User Manual <small class="version">3.4</small></h1>
+    <a class="list-group-item list-group-item-action " href="endpoints.html">Endpoints</a>
 
-<div class="row">
-  <div class="col-sm-3">
-    <ul class="nav nav-pills nav-stacked">
-  <li role="presentation" >
-    <a href="getting-started.html">Getting Started</a>
-  </li>
-  <li role="presentation" >
-    <a href="configuration.html">Configuration</a>
-  </li>
-  <li role="presentation" >
-    <a href="endpoints.html">Endpoints</a>
-  </li>
-  <li role="presentation" >
-    <a href="images.html">Images</a>
-  </li>
-  <li role="presentation"  class="active" >
-    <a href="resolvers.html">Resolvers</a>
-  </li>
-  <li role="presentation" >
-    <a href="processors.html">Processors</a>
-  </li>
-  <li role="presentation" >
-    <a href="caching.html">Caching</a>
-  </li>
-  <li role="presentation" >
-    <a href="access-control.html">Access Control</a>
-  </li>
-  <li role="presentation" >
-    <a href="delegate-script.html">Delegate Script</a>
-  </li>
-  <li role="presentation" >
-    <a href="overlays.html">Overlays</a>
-  </li>
-  <li role="presentation" >
-    <a href="redaction.html">Redaction</a>
-  </li>
-  <li role="presentation" >
-    <a href="logging.html">Logging</a>
-  </li>
-  <li role="presentation" >
-    <a href="deployment.html">Deployment</a>
-  </li>
-  <li role="presentation" >
-    <a href="remote-management.html">Remote Management</a>
-  </li>
-</ul>
+    <a class="list-group-item list-group-item-action " href="images.html">Images</a>
+
+    <a class="list-group-item list-group-item-action  active " href="resolvers.html">Resolvers</a>
+
+    <a class="list-group-item list-group-item-action " href="processors.html">Processors</a>
+
+    <a class="list-group-item list-group-item-action " href="caching.html">Caching</a>
+
+    <a class="list-group-item list-group-item-action " href="access-control.html">Access Control</a>
+
+    <a class="list-group-item list-group-item-action " href="metadata.html">Metadata</a>
+
+    <a class="list-group-item list-group-item-action " href="color-profiles.html">Color Profiles</a>
+
+    <a class="list-group-item list-group-item-action " href="overlays.html">Overlays</a>
+
+    <a class="list-group-item list-group-item-action " href="redaction.html">Redaction</a>
+
+    <a class="list-group-item list-group-item-action " href="delegate-script.html">Delegate Script</a>
+
+    <a class="list-group-item list-group-item-action " href="logging.html">Logging</a>
+
+    <a class="list-group-item list-group-item-action " href="deployment.html">Deployment</a>
+
+    <a class="list-group-item list-group-item-action " href="remote-management.html">Remote Management</a>
+  </div>
+</div>
 
   </div>
-  <div class="col-sm-9">
+  <div class="col-sm-8 col-md-9 col-lg-10">
+    <div class="alert alert-primary">
+  <i class="fa fa-info-circle"></i>
+  This version of the manual refers to an earlier version of the software.
+</div>
+
     <h1>Resolvers</h1>
 
 <ul>
@@ -158,13 +139,13 @@
   </li>
 </ul>
 
-<p>Resolvers provide access to source images. A resolver translates an identifier in a request URL to a source image locator, such as a pathname, in the particular type of underlying storage it is written to interface with. It can then check whether the underlying object exists and is accessible, and if so, provide access to it to other image server components. The rest of the image server does not need to know where an image resides, be it on the filesystem, on a remote web server, or wherever&mdash;it can just ask the resolver, whatever it may be, to provide a generic interface from which an image can be read.</p>
+<p>Resolvers locate and provide access to source images. A resolver translates an identifier in a request URL to an image locator, such as a pathname, in the particular type of underlying storage it is written to interface with. It can then check whether the underlying object exists and is accessible, and if so, provide access to it to other image server components. The rest of the image server does not need to know where an image resides, be it on the filesystem, in a database, on a remote web server, or in cloud storage&mdash;it can simply ask the current resolver, whatever it may be, to provide a generic interface from which an image can be read.</p>
 
-<p>The interface in question may be a stream or a file. All resolvers can provide stream access, but only <a href="#FilesystemResolver">FilesystemResolver</a> can provide file access. This distinction is important because <a href="processors.html#Resolver%20Compatibility">not all processors can read from streams</a>. See <a href="images.html#Considerations">Image Considerations</a> for background on why this is an issue.</p>
+<p>The interface in question may be a stream or a file. All resolvers can provide stream access, but only <a href="#FilesystemResolver">FilesystemResolver</a> can provide file access. This distinction is important because <a href="processors.html#Resolver%20Compatibility">not all processors can read from streams</a>.</p>
 
 <h2 id="Selection">Selection</h2>
 
-<p>In a typical configuration, <a href="#Static%20Resolver">one resolver will handle all requests</a>. It is also possible to <a href="#Dynamic%20Resolvers">select a resolver dynamically</a> depending on the image identifier.</p>
+<p>In a typical configuration, <a href="#Static%20Resolver">one resolver will handle all requests</a>. It is also possible to configure the image server to <a href="#Dynamic%20Resolvers">select a resolver dynamically</a> upon each request depending on the image identifier.</p>
 
 <h3 id="Static Resolver">Static Resolver</h2>
 
@@ -174,7 +155,7 @@
 
 <p>When a static resolver is not flexible enough, it is also possible to serve images from different sources simultaneously. For example, you may have some images stored on a filesystem, and others stored on Amazon S3. <em>If you can differentiate their sources based on their identifier in code</em>&mdash;either by analyzing the identifier string, or performing some kind of service request&mdash;you can use the <a href="delegate-script.html">delegate script</a> mechanism to write a simple Ruby method to tell the image server which resolver to use for a given request.</p>
 
-<p>To enable dynamic resolver selection, set the <code>resolver.delegate</code> configuration key to <code>true</code>. Then, implement the <code>get_resolver(identifier)</code> method in the delegate script, which takes an identifier argument and returns a resolver name. For example:</p>
+<p>To enable dynamic resolver selection, set the <code>resolver.delegate</code> configuration key to <code>true</code>. Then, implement the <code>get_resolver(identifier)</code> method in the delegate script, which takes in an identifier and returns a resolver name (like FilesystemResolver, HttpResolver, etc.) For example:</p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">module</span> <span class="nn">Cantaloupe</span>
   <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">get_resolver</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
@@ -223,7 +204,7 @@
 
 <h3 id="FilesystemResolver">FilesystemResolver</h3>
 
-<p>FilesystemResolver maps a URL identifier to a filesystem path, for retrieving images on a local or attached filesystem. In addition to being the most compatible resolver, <strong>this is also the most efficient resolver</strong> and may be the only option for serving very large source images.</p>
+<p>FilesystemResolver maps a URL identifier to a filesystem path, for retrieving images on a local or attached filesystem. In addition to being the most compatible resolver, <strong>this is also the most efficient resolver</strong> and may or may not be the only option for serving very large source images.</p>
 
 <p>For images with extensions that are missing or unrecognized, this resolver will check the "magic number" to determine type, which will add some overhead. It is therefore slightly more efficient to serve images with extensions.</p>
 
@@ -244,9 +225,9 @@
 
 <div class="alert alert-info">If you are operating behind a reverse proxy that is not capable of passing encoded URL characters through without decoding them, see the <code>slash_substitude</code> configuration key.</div>
 
-<p>To prevent arbitrary directory traversal, BasicLookupStrategy will strip out <code>../</code>, <code>/..</code>, <code>..\</code>, and <code>\..</code> from identifiers before resolving the path.</p>
+<p>To prevent arbitrary directory traversal, BasicLookupStrategy will strip out <code>..{path separator}</code> and <code>{path separator}..</code> from identifiers before resolving the path.</p>
 
-<div class="alert alert-warning">It may be dangerous to <strong>not</strong> use <code>path_prefix</code>. The shallower the path, the more of the filesystem that will be exposed.</div>
+<div class="alert alert-danger">Note: it may be dangerous to <strong>not</strong> use <code>path_prefix</code>. The shallower the path, the more of the filesystem that will be exposed.</div>
 
 <h4 id="FilesystemResolverScriptLookupStrategy">ScriptLookupStrategy</h4>
 
@@ -274,7 +255,7 @@
     <span class="c1"># get_pathname() is called, which would be slow and expensive.</span>
     <span class="vc">@@conn</span> <span class="o">=</span> <span class="no">DriverManager</span><span class="p">.</span><span class="nf">get_connection</span><span class="p">(</span><span class="no">JDBC_URL</span><span class="p">,</span> <span class="no">JDBC_USER</span><span class="p">,</span> <span class="no">JDBC_PASSWORD</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">get_pathname</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">get_pathname</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
       <span class="k">begin</span>
         <span class="c1"># Note the use of prepared statements to prevent SQL injection.</span>
         <span class="n">sql</span> <span class="o">=</span> <span class="s1">'SELECT pathname FROM images WHERE identifier = ? LIMIT 1'</span>
@@ -302,7 +283,7 @@
 
 <span class="k">module</span> <span class="nn">Cantaloupe</span>
   <span class="k">module</span> <span class="nn">FilesystemResolver</span>
-    <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">get_pathname</span><span class="p">(</span><span class="n">identifier</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">get_pathname</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
       <span class="n">uri</span> <span class="o">=</span> <span class="s1">'http://example.org/webservice/'</span> <span class="o">+</span> <span class="no">CGI</span><span class="p">.</span><span class="nf">escape</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
       <span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
 
@@ -316,13 +297,37 @@
   <span class="k">end</span>
 <span class="k">end</span></code></pre></figure>
 
+<h5>Example 3: Query Solr to find the pathname corresponding to a given identifier</h5>
+
+<p>In this variation on the previous example, our web service is Solr, and instead of parsing a text string out of the response body, we treat the body as Ruby code.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">'net/http'</span>
+<span class="nb">require</span> <span class="s1">'cgi'</span>
+
+<span class="k">module</span> <span class="nn">Cantaloupe</span>
+  <span class="k">module</span> <span class="nn">FilesystemResolver</span>
+    <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">get_pathname</span><span class="p">(</span><span class="n">identifier</span><span class="p">)</span>
+      <span class="n">uri</span> <span class="o">=</span> <span class="s1">'http://localhost:8983/solr/collection1/select?q='</span> <span class="o">+</span>
+          <span class="no">CGI</span><span class="p">.</span><span class="nf">escape</span><span class="p">(</span><span class="s1">'id:"'</span> <span class="o">+</span> <span class="n">identifier</span> <span class="o">+</span> <span class="s1">'"'</span><span class="p">)</span> <span class="o">+</span>
+          <span class="s1">'&amp;amp;fl=pathname_si&amp;amp;wt=ruby'</span>
+      <span class="n">uri</span> <span class="o">=</span> <span class="no">URI</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+
+      <span class="n">http</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">uri</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">uri</span><span class="p">.</span><span class="nf">port</span><span class="p">)</span>
+      <span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Get</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">uri</span><span class="p">.</span><span class="nf">request_uri</span><span class="p">)</span>
+      <span class="n">response</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+      <span class="k">return</span> <span class="kp">nil</span> <span class="k">if</span> <span class="n">response</span><span class="p">.</span><span class="nf">code</span><span class="p">.</span><span class="nf">to_i</span> <span class="o">&gt;=</span> <span class="mi">400</span>
+
+      <span class="n">results</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nf">body</span><span class="p">)[</span><span class="s1">'response'</span><span class="p">][</span><span class="s1">'docs'</span><span class="p">]</span>
+      <span class="n">results</span><span class="p">.</span><span class="nf">any?</span> <span class="p">?</span> <span class="n">results</span><span class="p">.</span><span class="nf">first</span><span class="p">[</span><span class="s1">'pathname_si'</span><span class="p">]</span> <span class="p">:</span> <span class="kp">nil</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
 <hr>
 
 <h3 id="HttpResolver">HttpResolver</h3>
 
 <p>HttpResolver maps a URL identifier to an HTTP or HTTPS resource, for retrieving images from a web server.</p>
-
-<p>Prior to version 3.4, HttpResolver used the HTTP client bundled with <a href="https://restlet.com/open-source/">Restlet Framework</a>. In version 3.4, the implementation changed to use the <a href="http://www.eclipse.org/jetty/documentation/current/http-client.html">Jetty HTTP client</a>, which is more robust.</p>
 
 <p>It is preferable to use this resolver with source images with recognizable file extensions. For images with an extension that is missing or unrecognizable, it will issue an HTTP HEAD request to the server to check the <code>Content-Type</code> header. If the type cannot be inferred from that, an error response will be returned.</p>
 
@@ -337,7 +342,7 @@
 <span class="py">HttpResolver.url_suffix</span> <span class="p">=</span></code></pre></figure>
 
 <p>An identifier of <code>image.jpg</code> in the URL will resolve to
-<span class="filename">http://example.org/images/image.jpg</span>.</p>
+<span class="filename">http://example.org/images/image.jpg</span>.
 
 <p>It's also possible to include a partial path in the identifier using URL-encoded slashes (<code>%2F</code>) as path separators. <code>subdirectory%2Fimage.jpg</code> in the URL would then resolve to <span class="filename">http://example.org/images/subdirectory/image.jpg</span>.</p>
 
@@ -353,7 +358,7 @@
 
 <h3 id="JdbcResolver">JdbcResolver</h3>
 
-<p>JdbcResolver maps a URL identifier to a BLOB field, for retrieving images from a relational database. It does not require a custom schema and can adapt to any schema. The downside of that is that some <a href="delegate-script.html">delegate script</a> methods must be implemented in order to obtain the information needed to run the SQL queries.</p>
+<p>JdbcResolver maps a URL identifier to an RDBMS BLOB field, for retrieving images from a relational database. It does not require a custom schema and can adapt to any schema. The downside of that is that some <a href="delegate-script.html">delegate script</a> methods must be implemented in order to obtain the information needed to run the SQL queries.</p>
 
 <p>Cantaloupe does not include any JDBC drivers, so a driver JAR for the desired database must be obtained separately and saved somewhere on the classpath.</p>
 
@@ -422,32 +427,26 @@ jdbc:microsoft:sqlserver://example.org:1433;DatabaseName=MY_DATABASE</code></pre
 
 <h3 id="AmazonS3Resolver">AmazonS3Resolver</h3>
 
-<p>AmazonS3Resolver maps a URL identifier to an <a href="https://aws.amazon.com/s3/">Amazon Simple Storage Service (S3)</a> object, for retrieving images from Amazon S3.</p>
-
-<h4>Configuration</h4>
-
-<p>AmazonS3Resolver is configured (excepting credentials) using the following configuation keys:</p>
+<p>AmazonS3Resolver maps a URL identifier to an <a href="https://aws.amazon.com/s3/">Amazon Simple Storage Service (S3)</a> object, for retrieving images from Amazon S3. It can be configured with the following options:</p>
 
 <dl>
+  <dt><code>AmazonS3Resolver.access_key_id</code></dt>
+  <dd>An access key associated with your AWS account. (See <a href="http://aws.amazon.com/security-credentials">AWS Security Credentials</a>.)</dd>
+  <dt><code>AmazonS3Resolver.secret_key</code></dt>
+  <dd>A secret key associated with your AWS account. (See <a href="http://aws.amazon.com/security-credentials">AWS Security Credentials</a>.)</dd>
   <dt><code>AmazonS3Resolver.bucket.name</code></dt>
   <dd>Name of the bucket containing the images to be served.</dd>
   <dt><code>AmazonS3Resolver.bucket.region</code></dt>
-  <dd>Name of a region to send requests to, such as <code>us-east-1</code>.</dd>
+  <dd>Name of a region to send requests to, such as <code>us-east-1</code>. Can be commented out or left blank to use a default region. (See <a href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">S3 Regions</a>.)</dd>
   <dt><code>AmazonS3Resolver.lookup_strategy</code></dt>
-  <dd>The strategy to use to look up images based on their URL identifier. See <a href="#AmazonS3ResolverLookupStrategies">Lookup Strategies</a>.</dd>
+  <dd>The strategy to use to look up images based on their URL identifier. See below.</dd>
 </dl>
 
-<h4 id="AmazonS3ResolverCredentialsSources">Credentials Sources</h4>
-
-<p>AmazonS3Resolver can obtain its credentials from several different sources. It will first consult the <code>AmazonS3Resolver.access_key_id</code> and  <code>AmazonS3Resolver.secret_key</code> keys in the application configuration. If those are not set, it will fall back to the strategy employed by the AWS SDK's <code>DefaultAWSCredentialsProviderChain</code>; see its <a href="https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html?com/amazonaws/auth/DefaultAWSCredentialsProviderChain.html">class documentation</a> for details.</p>
-
-<h4 id="AmazonS3ResolverLookupStrategies">Lookup Strategies</h4>
-
-<h5 id="AmazonS3ResolverBasicLookupStrategy">BasicLookupStrategy</h5>
+<h4 id="AmazonS3ResolverBasicLookupStrategy">BasicLookupStrategy</h4>
 
 <p>BasicLookupStrategy locates images by passing the URL identifier as-is to S3, with no additional configuration necessary or possible.</p>
 
-<h5 id="AmazonS3ResolverScriptLookupStrategy">ScriptLookupStrategy</h5>
+<h4 id="AmazonS3ResolverScriptLookupStrategy">ScriptLookupStrategy</h4>
 
 <p>When your URL identifiers don't match your Amazon S3 object keys, ScriptLookupStrategy is available to tell AmazonS3Resolver to capture the object key returned by a method in your <a href="delegate-script.html">delegate script</a>.</p>
 
@@ -470,13 +469,11 @@ jdbc:microsoft:sqlserver://example.org:1433;DatabaseName=MY_DATABASE</code></pre
   <dd>The strategy to use to look up images based on their URL identifier. See below.</dd>
 </dl>
 
-<h4>Lookup Strategies</h4>
-
-<h5 id="AzureStorageResolverBasicLookupStrategy">BasicLookupStrategy</h5>
+<h4 id="AzureStorageResolverBasicLookupStrategy">BasicLookupStrategy</h4>
 
 <p>BasicLookupStrategy locates images by passing the URL identifier as-is to Azure Storage, with no additional configuration necessary or possible.</p>
 
-<h5 id="AzureStorageResolverScriptLookupStrategy">ScriptLookupStrategy</h5>
+<h4 id="AzureStorageResolverScriptLookupStrategy">ScriptLookupStrategy</h4>
 
 <p>When your URL identifiers don't match your Azure Storage blob keys, ScriptLookupStrategy is available to tell AzureStorageResolver to capture the blob key returned by a method in your <a href="delegate-script.html">delegate script</a>.</p>
 
