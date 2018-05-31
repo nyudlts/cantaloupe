@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+  <!DOCTYPE html>
+<head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="High-performance IIIF image server in Java
+  <meta name="description" content="High-performance dynamic image server in Java
 ">
 
   <title>
@@ -17,116 +17,107 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="/cantaloupe/css/syntax.css">
-  <link rel="stylesheet" href="/cantaloupe/css/base.css">
+  <link rel="stylesheet" href="/cantaloupe/css/manual.css">
 
   <script src="/cantaloupe/scripts/jquery.min.js"></script>
-
-  <script>
-  // Redirect http:// to https:// (except on localhost)
-  var host = 'https://medusa-project.github.io'.replace('http://', '').
-      replace('https://', '').split(/[/?#]/)[0];
-  if (window.location.host == host && window.location.protocol != 'https:') {
-    window.location.protocol = 'https:';
-  }
-  </script>
 
 </head>
 
 
   <body>
 
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+  <a class="navbar-brand" href="/cantaloupe/">
+    <img alt="Cantaloupe" src="/cantaloupe/images/cantaloupe.png" width="40">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-items" aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/cantaloupe/">
-        <img alt="Cantaloupe" src="/cantaloupe/images/cantaloupe.png" width="40">
-      </a>
-    </div>
+  <div class="collapse navbar-collapse" id="navbar-items">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle  active " href="#" id="user-manual-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          User Manual
+        </a>
+        <div class="dropdown-menu" aria-labelledby="user-manual-dropdown">
+          <a class="dropdown-item" href="/cantaloupe/manual/4.0/getting-started.html">4.0</a>
+          <a class="dropdown-item" href="/cantaloupe/manual/3.4/getting-started.html">3.4</a>
+          <a class="dropdown-item" href="/cantaloupe/manual/3.3/getting-started.html">3.3</a>
+          <a class="dropdown-item" href="/cantaloupe/manual/3.2/getting-started.html">3.2</a>
+          <a class="dropdown-item" href="/cantaloupe/manual/3.1/getting-started.html">3.1</a>
+          <a class="dropdown-item" href="/cantaloupe/manual/3.0/getting-started.html">3.0</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/cantaloupe/upgrade.html">Upgrading</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="/cantaloupe/changes.html">Change Log</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/medusa-project/cantaloupe/">GitHub</a>
+      </li>
+    </ul>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Get Started <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/cantaloupe/get-started.html">For the First Time</a></li>
-            <li><a href="/cantaloupe/upgrade.html">Upgrade</a></li>
-            <li class="divider"></li>
-            <li><a href="/cantaloupe/changes.html">Change Log</a></li>
-          </ul>
-        </li>
-        <li><a href="/cantaloupe/manual/">User Manual</a></li>
-        <li><a href="https://github.com/medusa-project/cantaloupe/">GitHub</a></li>
-        <li><a href="/cantaloupe/help.html">Help &amp; Feedback</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="https://github.com/medusa-project/cantaloupe/releases.atom" title="Subscribe to Releases"><img width="22" height="22" src="/cantaloupe/images/feed.svg"></a></li>
-      </ul>
-    </div>
-
+    <ul class="navbar-nav ml-md-auto">
+      <li class="nav-item">
+        <a href="https://github.com/medusa-project/cantaloupe/releases.atom" title="Subscribe to Releases">
+          <img width="22" height="22" src="/cantaloupe/images/feed.svg">
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>
 
 
     <div class="container-fluid">
-      <ul class="nav nav-pills">
-  <li role="presentation" ><a href="/cantaloupe/manual/3.4/">3.4</a></li>
-  <li role="presentation"  class="active" ><a href="/cantaloupe/manual/3.3/">3.3</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/3.2/">3.2</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/3.1/">3.1</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/3.0/">3.0</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/2.2/">2.2</a></li>
-  <li role="presentation" ><a href="/cantaloupe/manual/2.1/">2.1</a></li>
-</ul>
+      <div class="row">
+  <div class="col-sm-4 col-md-3 col-lg-2 d-print-none">
+    <div class="card">
+  <h5 class="card-header version">3.3</h5>
+  <div class="list-group list-group-flush">
+    <a class="list-group-item list-group-item-action " href="getting-started.html">Getting Started</a>
 
+    <a class="list-group-item list-group-item-action " href="configuration.html">Configuration</a>
 
-<h1>User Manual <small class="version">3.3</small></h1>
+    <a class="list-group-item list-group-item-action " href="endpoints.html">Endpoints</a>
 
-<div class="row">
-  <div class="col-sm-3">
-    <ul class="nav nav-pills nav-stacked">
-  <li role="presentation" >
-    <a href="getting-started.html">Getting Started</a></li>
-  <li role="presentation" >
-    <a href="configuration.html">Configuration</a></li>
-  <li role="presentation" >
-    <a href="endpoints.html">Endpoints</a></li>
-  <li role="presentation" >
-    <a href="images.html">Images</a></li>
-  <li role="presentation" >
-    <a href="resolvers.html">Resolvers</a></li>
-  <li role="presentation" >
-    <a href="processors.html">Processors</a></li>
-  <li role="presentation" >
-    <a href="caching.html">Caching</a></li>
-  <li role="presentation" >
-    <a href="access-control.html">Access Control</a></li>
-  <li role="presentation" >
-    <a href="metadata.html">Metadata</a></li>
-  <li role="presentation" >
-    <a href="color-profiles.html">Color Profiles</a></li>
-  <li role="presentation"  class="active" >
-    <a href="overlays.html">Overlays</a></li>
-  <li role="presentation" >
-    <a href="redaction.html">Redaction</a></li>
-  <li role="presentation" >
-    <a href="delegate-script.html">Delegate Script</a></li>
-  <li role="presentation" >
-    <a href="logging.html">Logging</a></li>
-  <li role="presentation" >
-    <a href="deployment.html">Deployment</a></li>
-  <li role="presentation" >
-    <a href="remote-management.html">Remote Management</a></li>
-</ul>
+    <a class="list-group-item list-group-item-action " href="images.html">Images</a>
+
+    <a class="list-group-item list-group-item-action " href="resolvers.html">Resolvers</a>
+
+    <a class="list-group-item list-group-item-action " href="processors.html">Processors</a>
+
+    <a class="list-group-item list-group-item-action " href="caching.html">Caching</a>
+
+    <a class="list-group-item list-group-item-action " href="access-control.html">Access Control</a>
+
+    <a class="list-group-item list-group-item-action " href="metadata.html">Metadata</a>
+
+    <a class="list-group-item list-group-item-action " href="color-profiles.html">Color Profiles</a>
+
+    <a class="list-group-item list-group-item-action  active " href="overlays.html">Overlays</a>
+
+    <a class="list-group-item list-group-item-action " href="redaction.html">Redaction</a>
+
+    <a class="list-group-item list-group-item-action " href="delegate-script.html">Delegate Script</a>
+
+    <a class="list-group-item list-group-item-action " href="logging.html">Logging</a>
+
+    <a class="list-group-item list-group-item-action " href="deployment.html">Deployment</a>
+
+    <a class="list-group-item list-group-item-action " href="remote-management.html">Remote Management</a>
+  </div>
+</div>
 
   </div>
-  <div class="col-sm-9">
+  <div class="col-sm-8 col-md-9 col-lg-10">
+    <div class="alert alert-primary">
+  <i class="fa fa-info-circle"></i>
+  This version of the manual refers to an earlier version of the software.
+</div>
+
     <h1>Overlays</h1>
 
 <ul>
