@@ -74,6 +74,18 @@
     <div class="container-fluid">
       <h1>Change Log</h1>
 
+<h2>4.0.1</h2>
+
+<ul>
+  <li>Fixed a regression introduced in 3.4.3 that could cause URIs to appear with the wrong scheme in information responses and <code>Link</code> headers. (Thanks to @mmatela and @jweisman)</li>
+  <li>Fixed a bug that caused the minimum tile size in IIIF Image API 2.x information responses to be 512 regardless of the setting of <code>endpoint.iiif.min_tile_size</code>.</li>
+  <li>Fixed a connection leak in HttpSource.</li>
+  <li>Improved the resiliency of the internal JPEG2000 parser used by KakaduDemoProcessor and OpenJpegProcessor.</li>
+  <li>Fixed KakaduNativeProcessor's handling of <code>sizeByDistortedWidtHeight</code> requests.</li>
+  <li>Removed an error message that would appear in the log when the delegate script file was not found but the delegate script was disabled.</li>
+  <li>The <code>X-Forwarded-Host</code> reverse proxy header may contain a port number, which will be used if <code>X-Forwarded-Port</code> is not supplied.</li>
+</ul>
+
 <h2>4.0</h2>
 
 <h3>Endpoints</h3>
@@ -131,6 +143,13 @@
 <ul>
   <li>Java 10 (18.3) is supported.</li>
   <li>Updated JRuby to 9.1.17.0.</li>
+</ul>
+
+<h2>3.4.4</h2>
+
+<ul>
+  <li>Fixed a regression introduced in 3.4.3 that could cause URIs to appear with the wrong scheme in information responses and <code>Link</code> headers. (Thanks to @mmatela and @jweisman)</li>
+  <li>The <code>X-Forwarded-Host</code> reverse proxy header may contain a port, which will be used if <code>X-Forwarded-Port</code> is not supplied.</li>
 </ul>
 
 <h2>3.4.3</h2>
