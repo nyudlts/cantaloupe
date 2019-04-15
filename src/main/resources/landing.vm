@@ -17,6 +17,8 @@
 <body>
     <div id="container">
         <img src="static/images/cantaloupe-320.png" width="320" alt="Logo">
+        <a href="/cantaloupe/admin/">Admin page</a>
+        <a href="/cantaloupe/iiif/2/header-image.jpg/pct:50,50,100,100/full/0/default.png">Sample image URL</a>
         <h1>Cantaloupe Image Server <small>$version</small></h1>
     </div>
 </body>
